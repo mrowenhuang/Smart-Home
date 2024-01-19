@@ -1,0 +1,7 @@
+{
+    "icon" : "image",
+    "name" : "smart item",
+    "status" : false,
+    "number" : 123,
+    "param" : "c"
+}
