@@ -153,6 +153,8 @@ class HomeControlView extends GetView<HomeController> {
                 children: [
                   Obx(
                     () => DropdownButton(
+                      borderRadius: BorderRadius.circular(20),
+                      
                       items: controller.selectedItems
                           .map(
                             (element) => DropdownMenuItem(

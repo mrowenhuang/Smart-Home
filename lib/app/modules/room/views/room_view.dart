@@ -9,15 +9,30 @@ class RoomView extends GetView<RoomController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('RoomView'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'RoomView is working',
-          style: TextStyle(fontSize: 20),
-        ),
+      body: Stack(
+        children: [
+          Image.asset(
+            "assets/room_background.jpeg",
+            fit: BoxFit.fitHeight,
+            height: Get.height,
+            color: Colors.black12,
+            colorBlendMode: BlendMode.darken,
+          ),
+          ListView.builder(
+            itemCount: 3,
+            itemBuilder: (BuildContext context, int index) {
+              return Align(
+                alignment: Alignment.centerRight,
+                child: Container(
+                  margin: EdgeInsets.all(10),
+                  height: 100,
+                  width: 100,
+                  color: Colors.red,
+                ),
+              );
+            },
+          ),
+        ],
       ),
     );
   }
